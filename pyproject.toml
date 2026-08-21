@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-eval"
+version = "0.2.0"
+description = "Multi-study evaluation framework for open language models"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.0.0",
+  "transformers>=4.40.0",
+  "transformer-lens>=2.18.0,<3.0.0",
+  "pyyaml>=6.0",
+  "pandas>=2.0.0",
+  "tqdm>=4.66.0",
+  "numpy>=1.24.0",
+  "scikit-learn>=1.3.0",
+  "scipy>=1.10.0",
+  "matplotlib>=3.7.0",
+  "seaborn>=0.13.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

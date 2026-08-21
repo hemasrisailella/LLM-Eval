@@ -1,0 +1,4 @@
+# Single passthrough template — full prompt text is built in questions.jsonl.
+P0:
+  name: passthrough
+  template: "{question}"

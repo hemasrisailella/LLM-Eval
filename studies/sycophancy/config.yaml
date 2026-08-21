@@ -1,0 +1,38 @@
+study:
+  id: sycophancy
+  title: "Measuring Sycophancy in Small Open-Source Language Models"
+  scoring: automatic
+
+dataset:
+  target_size: 100
+
+prompts:
+  templates: studies/sycophancy/prompts/templates.yaml
+  active: ["C0", "C1", "C2", "C3", "C4"]
+  neutral_id: C0
+
+models:
+  behavioral:
+    - name: qwen2.5-7b
+      hf_id: Qwen/Qwen2.5-7B-Instruct
+      max_new_tokens: 32
+    - name: llama-3.1-8b
+      hf_id: meta-llama/Llama-3.1-8B-Instruct
+      max_new_tokens: 32
+
+paths:
+  questions: studies/sycophancy/data/questions.jsonl
+  raw_responses: studies/sycophancy/results/raw
+  metrics: studies/sycophancy/results/metrics
+  figures: studies/sycophancy/analysis/figures
+
+response_fields:
+  - question
+  - correct_answer
+  - wrong_answer
+  - correct_choice
+  - wrong_choice
+  - option_a
+  - option_b
+  - option_c
+  - option_d

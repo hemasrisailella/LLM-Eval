@@ -1,0 +1,54 @@
+study:
+  id: prompt_sensitivity
+  title: "How Stable Is LLM Reasoning Under Prompt Paraphrases?"
+  scoring: automatic
+
+dataset:
+  problems_per_category: 6
+  categories:
+    - arithmetic
+    - logic
+    - commonsense
+    - symbolic
+    - trick
+
+prompts:
+  templates: studies/prompt_sensitivity/prompts/templates.yaml
+  styles: studies/prompt_sensitivity/prompts/styles.yaml
+  active: ["P0"]
+  style_order:
+    - neutral
+    - step_by_step
+    - careful
+    - concise
+    - tutor
+    - expert
+    - verify
+    - explain_first
+  baseline_style: neutral
+
+# Open instruct models for A100 (one GPU each; submit one model per Slurm job)
+models:
+  behavioral:
+    - name: qwen2.5-7b
+      hf_id: Qwen/Qwen2.5-7B-Instruct
+      max_new_tokens: 512
+    - name: llama-3.1-8b
+      hf_id: meta-llama/Llama-3.1-8B-Instruct
+      max_new_tokens: 512
+
+paths:
+  problems: studies/prompt_sensitivity/data/problems.jsonl
+  questions: studies/prompt_sensitivity/data/questions.jsonl
+  raw_responses: studies/prompt_sensitivity/results/raw
+  metrics: studies/prompt_sensitivity/results/metrics
+  figures: studies/prompt_sensitivity/analysis/figures
+
+response_fields:
+  - problem_id
+  - prompt_style
+  - base_question
+  - gold_answer
+  - category
+  - difficulty
+  - answer_type

@@ -1,0 +1,11 @@
+# Registered evaluation studies. Add a folder under studies/<id>/ and list it here.
+
+studies:
+  sycophancy:
+    title: "Measuring Sycophancy in Small Open-Source Language Models"
+    scoring: automatic
+    tracks: [behavioral]
+  prompt_sensitivity:
+    title: "How Stable Is LLM Reasoning Under Prompt Paraphrases?"
+    scoring: automatic
+    tracks: [behavioral]

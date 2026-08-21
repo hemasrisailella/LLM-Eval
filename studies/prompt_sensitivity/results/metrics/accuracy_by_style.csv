@@ -1,0 +1,17 @@
+model,prompt_style,accuracy,n
+llama-3.1-8b,neutral,0.5,30
+llama-3.1-8b,tutor,0.5,30
+llama-3.1-8b,careful,0.4666666666666667,30
+llama-3.1-8b,expert,0.4666666666666667,30
+llama-3.1-8b,explain_first,0.43333333333333335,30
+llama-3.1-8b,step_by_step,0.4,30
+llama-3.1-8b,verify,0.4,30
+llama-3.1-8b,concise,0.36666666666666664,30
+qwen2.5-7b,careful,0.7333333333333333,30
+qwen2.5-7b,verify,0.7,30
+qwen2.5-7b,concise,0.6666666666666666,30
+qwen2.5-7b,expert,0.6333333333333333,30
+qwen2.5-7b,explain_first,0.6333333333333333,30
+qwen2.5-7b,neutral,0.6333333333333333,30
+qwen2.5-7b,step_by_step,0.6333333333333333,30
+qwen2.5-7b,tutor,0.6,30

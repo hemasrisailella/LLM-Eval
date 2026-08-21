@@ -1,0 +1,10 @@
+# Copy to config.yaml on the GPU server (or merge these lines into config.yaml):
+#
+#   cp config.gpu.yaml config.yaml
+#
+inference:
+  device: cuda
+  dtype: bfloat16
+  batch_size: 1
+  temperature: 0.0
+  do_sample: false

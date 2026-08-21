@@ -1,0 +1,16 @@
+# Copy settings into config.yaml on the GPU server (or merge manually).
+# Do not commit passwords or HF tokens.
+
+inference:
+  device: cuda
+  dtype: bfloat16
+  batch_size: 1
+  temperature: 0.0
+  do_sample: false
+
+# Example: override root models list when on GPU (optional)
+# models:
+#   behavioral:
+#     - name: qwen2.5-7b
+#       hf_id: Qwen/Qwen2.5-7B-Instruct
+#       max_new_tokens: 512

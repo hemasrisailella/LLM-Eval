@@ -1,0 +1,22 @@
+# Shared settings for all studies (models, inference, hardware).
+# Study-specific models can override under studies/<name>/config.yaml
+#
+# Local laptop (no GPU):  device: cpu,  dtype: float32,  use gpt2 in study configs
+# Lab A100 (via Slurm):   device: cuda, dtype: bfloat16, use 7B models in study configs
+
+inference:
+  device: cpu  # cuda on GPU server
+  dtype: float32  # bfloat16 on A100
+  batch_size: 1
+  temperature: 0.0
+  do_sample: false
+
+# Default models (used only if a study does not define models.behavioral)
+models:
+  behavioral:
+    - name: qwen2.5-7b
+      hf_id: Qwen/Qwen2.5-7B-Instruct
+      max_new_tokens: 512
+    - name: llama-3.1-8b
+      hf_id: meta-llama/Llama-3.1-8B-Instruct
+      max_new_tokens: 512

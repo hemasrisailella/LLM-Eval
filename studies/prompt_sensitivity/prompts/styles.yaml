@@ -1,0 +1,66 @@
+# Instruction wrappers — meaning fixed; only style changes.
+# Placeholders: {base_question}
+
+neutral: |
+  Answer the following question.
+
+  Question: {base_question}
+
+  At the end, write your final answer on its own line in exactly this format:
+  FINAL ANSWER: <your answer>
+
+step_by_step: |
+  Solve the following problem step by step.
+
+  Question: {base_question}
+
+  At the end, write your final answer on its own line in exactly this format:
+  FINAL ANSWER: <your answer>
+
+careful: |
+  Think carefully before answering.
+
+  Question: {base_question}
+
+  At the end, write your final answer on its own line in exactly this format:
+  FINAL ANSWER: <your answer>
+
+concise: |
+  Give only the final answer after brief reasoning.
+
+  Question: {base_question}
+
+  At the end, write your final answer on its own line in exactly this format:
+  FINAL ANSWER: <your answer>
+
+tutor: |
+  You are a patient math tutor. Explain clearly, then give the answer.
+
+  Question: {base_question}
+
+  At the end, write your final answer on its own line in exactly this format:
+  FINAL ANSWER: <your answer>
+
+expert: |
+  You are an expert reasoner. Solve the problem rigorously.
+
+  Question: {base_question}
+
+  At the end, write your final answer on its own line in exactly this format:
+  FINAL ANSWER: <your answer>
+
+verify: |
+  Solve the problem and verify your answer before responding.
+
+  Question: {base_question}
+
+  At the end, write your final answer on its own line in exactly this format:
+  FINAL ANSWER: <your answer>
+
+explain_first: |
+  Explain your reasoning first, then state the final answer.
+
+  Question: {base_question}
+
+  At the end, write your final answer on its own line in exactly this format:
+  FINAL ANSWER: <your answer>
